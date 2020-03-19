@@ -1,0 +1,15 @@
+Docker compose is used when we want to interlink various running containers.
+
+It is very useful since it automatically creates the network related settings 
+so that containers can easily talk to each other.
+
+One thing to note is to croos connect a port on a diff. container we have to use
+the `service name` as the `host name` of the container we are trying to connect.
+
+#Commands
+
+- docker-compose up	//start all containers as in docker-compose.yml file
+
+- docker-compose up --build	//to rebuild the conatiners defined in the docker-compose.yml file
+
+- docker-compose down	//stop all the containers

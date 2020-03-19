@@ -1,0 +1,28 @@
+An example for docker compose.
+
+Task.
+- Build a container having redis-client
+- Create a docker-compose file defining both redis-server and redis-client and connect the client to the server
+- To ensure connection is success, put a key and retrieve the key value and put it in a shared volume file
+
+Solution.
+
+1. Create the redis-client build
+
+- docker build . --tag <docker_id>/<image_name>:<tag - optional>
+
+ex. docker build . --tage joydeep56053/redis-client:latest 
+
+2. Pull the redis-server image 
+
+- docker pull redis
+
+3. Create the docker-compose.yml file	//Specification for this is beyond the scope of this file, refer docker docs.
+
+4. Run docker compose
+
+- docker-compose up
+
+5. Check if the file 'output.txt' is created in '/root/docker' path in local. (Ensure this path has necessary permissions)
+
+The content of this file should be '123'

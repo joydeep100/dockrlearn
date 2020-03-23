@@ -21,20 +21,24 @@ Docker Image is a set of files which has no state, whereas Docker Container is t
 
 - docker run -p <src_host_port>:<container_host_port>	//port mapping
 
-- docker run -v <src_node_path>:<container_node_path>	//volume mapping - use absolute and existing paths(in client node)
-
 - docker run --rm <image_name>	//will ensure the contaier related files are removed from docker daemon when the process stops, a practical way to see this is 'docker ps -a' with this flag included you can see there will be no trace here once the container is stopped
 
 - docker exec -it <container_id> <command>	//to get access to the running container
 
-```docker exec -it efe1f0ab1991 bash```
+ex. ```docker exec -it efe1f0ab1991 bash```
 
 - docker attach <container_id>	//to attach to a detached & running container
+
+##Volumes
+
+- docker run -v <src_node_path>:<container_node_path>	//volume mapping - use absolute and existing paths(in client node)
+
+ex. ```docker run -v $(pwd):/app```
+ex. ```docker run -v /app/src``` //it means do not touch this path in the target container
+
 
 ##Build
 
 - docker build .	//Ensure Dockerfile is present, '.' is the context. which means all path in local are relative to this path
 
-- docker build . 
-
-- docker build -f <path/to/dockerfile> <path/to/context/path>
+- docker build -f <path/to/dockerfile> <path/to/context>

@@ -1,0 +1,13 @@
+Using a multi step docker builder, we can take the output / processed data 
+from one build and pass it to another, without the overhead of the entire process.
+Since the builder part is just a idependent part of the process, we can make sure
+the end conatiner is as concise as possible.
+
+In the given example, in the builder part we generate the /app/build files.
+Which is a requirement for the Runner part.
+
+So we can phase this into multi step.
+
+
+
+

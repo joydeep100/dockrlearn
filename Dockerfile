@@ -10,3 +10,8 @@ CMD ["redis-server"]
 
 #Other commands
 # ADD , COPY, WORKDIR, ENV, EXPOSE, VOLUME, ENTRYPOINT
+
+#notes
+#EXPOSE 8080	// this wont do anything in docker as such, but in AWS this is actually used to expose ports
+
+

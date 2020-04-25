@@ -1,13 +1,13 @@
-##Docker Image & Container definition
+## Docker Image & Container definition
 Docker Image is a set of files which has no state, whereas Docker Container is the instantiation of Docker Image. In other words, Docker Container is the run time instance of images.
 
-##Images
+## Images
 
 - docker images	//List all images
 
 - docker rmi -f <image_name>	//To untag and remove an image
 
-##Process
+## Process
 
 - docker run <image_name>	//run an instance
 
@@ -29,7 +29,7 @@ ex. ```docker exec -it efe1f0ab1991 bash```
 
 - docker attach <container_id>	//to attach to a detached & running container
 
-##Volumes
+## Volumes
 
 - docker run -v <src_node_path>:<container_node_path>	//volume mapping - use absolute and existing paths(in client node)
 
@@ -37,7 +37,7 @@ ex. ```docker run -v $(pwd):/app```
 ex. ```docker run -v /app/src``` //it means do not touch this path in the target container
 
 
-##Build
+## Build
 
 - docker build .	//Ensure Dockerfile is present, '.' is the context. which means all path in local are relative to this path
 
